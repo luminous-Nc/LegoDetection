@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 from legodetector import LegoDetector
 from global_setting import *
 
-validate_folder_name = 'new_validate'
-# validate_folder_name = 'validate'
+validate_folder_name = 'blur_validate'
+# validate_folder_name = 'clear_validate'
 
 
 def count_label_number():
