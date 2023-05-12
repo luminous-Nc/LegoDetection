@@ -1,5 +1,4 @@
-import serial
-import numpy as np
+# Tools for capture pictures with Lego Minifigures and label the number for validating the detection
 import cv2
 from arduinocamera import ArduinoCamera
 
@@ -12,7 +11,7 @@ Stopbits = 1
 file_begin_index = 151
 
 
-def write_picture_and_number(picture, file_index, people_number):
+def save_picture_with_number(picture, file_index, people_number):
     picture_name = f"test_pic_{file_index}-{people_number}.jpg"
     cv2.imwrite(f"new_validate/{picture_name}", picture)
     print(f'save {picture_name} with people number {people_number}')
@@ -33,23 +32,23 @@ if __name__ == "__main__":
 
         if key == ord('1'):
             people_number = 1
-            picture_name, people_number = write_picture_and_number(picture, file_begin_index, people_number)
+            picture_name, people_number = save_picture_with_number(picture, file_begin_index, people_number)
             file_begin_index += 1
         if key == ord('2'):
             people_number = 2
-            picture_name, people_number = write_picture_and_number(picture, file_begin_index, people_number)
+            picture_name, people_number = save_picture_with_number(picture, file_begin_index, people_number)
             file_begin_index += 1
         if key == ord('3'):
             people_number = 3
-            picture_name, people_number = write_picture_and_number(picture, file_begin_index, people_number)
+            picture_name, people_number = save_picture_with_number(picture, file_begin_index, people_number)
             file_begin_index += 1
         if key == ord('4'):
             people_number = 4
-            picture_name, people_number = write_picture_and_number(picture, file_begin_index, people_number)
+            picture_name, people_number = save_picture_with_number(picture, file_begin_index, people_number)
             file_begin_index += 1
         if key == ord('0'):
             people_number = 0
-            picture_name, people_number = write_picture_and_number(picture, file_begin_index, people_number)
+            picture_name, people_number = save_picture_with_number(picture, file_begin_index, people_number)
             file_begin_index += 1
         if key == ord('Q'):
             break
