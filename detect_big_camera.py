@@ -4,8 +4,7 @@ from ultralytics import YOLO
 if __name__ == '__main__':
 
     cap = cv2.VideoCapture(0)
-
-    model = YOLO('yolov8n.pt')
+    model = YOLO('lego_detection_model.pt')
 
     if not cap.isOpened():
         print("Could not open camera")
@@ -14,7 +13,6 @@ if __name__ == '__main__':
     detect_flag = False
 
     while cap.isOpened():
-
         success, frame = cap.read()
 
         if success:

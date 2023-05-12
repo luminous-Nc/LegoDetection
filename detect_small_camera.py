@@ -13,10 +13,11 @@ SerialObj.bytesize = 8
 SerialObj.parity = 'N'
 SerialObj.stopbits = 1
 
+detect_class_name = 'Lego-People'
+detect_conf = 0.25
 
-def init_detect_model():
-    model = YOLO('lego_detection_model.pt')
-    return model
+
+
 
 
 def wait_arduino_until_message(until_message):
@@ -31,18 +32,6 @@ def set_picture_size():
     SerialObj.write(bytes([0x05]))
     wait_arduino_until_message('ACK CMD switch to OV2640_800x600END\r\n')
     print('Set Picture Size to 800 x 600')
-
-
-def detect_picture(model, picture):
-    results = model.predict(source=picture, conf=0.12)
-    boxes = results[0].boxes
-    names = results[0].names
-    classes = boxes.cls
-    objects = [names[int(x)] for x in classes]
-    num_persons = objects.count('person')
-    annotated_frame = results[0].plot(masks=True, line_width=None)
-    return num_persons, annotated_frame
-
 
 def get_picture():
     SerialObj.write(bytes([0x10]))
