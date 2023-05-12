@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
         lego_people_num, result = detector.detect_lego_people(picture)
 
-        cv2.imshow("Lego Detection with ArduCam-2MP-Plus", result)
+        cv2.imshow("Lego Detection with ArduCam", result)
 
         # Control the detection interval if needed
         if enable_detect_interval:
