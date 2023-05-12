@@ -17,7 +17,7 @@ class ArduinoCamera:
         wait_string = until_message
         res_string = self.serial_obj.readline().decode('UTF-8')
         while res_string != wait_string:
-            print(f'Receive from Serial:{res_string}')
+            # print(f'Receive from Serial:{res_string}')
             res_string = self.serial_obj.readline().decode('UTF-8')
 
     def wait_for_ready(self):

@@ -1,13 +1,12 @@
 from ultralytics import YOLO
 import cv2
 
-
 class LegoDetector:
     def __init__(self, model, conf, lego_class_name):
         self.predict_model = YOLO(model)
         self.conf = conf
         self.lego_class_name = lego_class_name
-        print(f"Detector is ready")
+        print(f"Generate Lego Detector using {model} with conf {conf} ")
 
     def detect_lego_people(self, picture):
         results = self.predict_model.predict(source=picture, conf=self.conf)

@@ -1,19 +1,7 @@
-import time
-import numpy as np
 import cv2
-from ultralytics import YOLO
-import detect_lego
 from arduinocamera import ArduinoCamera
 from legodetector import LegoDetector
-detect_model_name = "lego_detection_model.pt"
-detect_class_name = 'Lego-People'
-detect_conf = 0.25
-
-Port = 'COM7'
-Baudrate = 921600
-Bytesize = 8
-Parity = 'N'
-Stopbits = 1
+from global_setting import *
 
 
 if __name__ == "__main__":
