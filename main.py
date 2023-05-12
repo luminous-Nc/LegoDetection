@@ -1,4 +1,5 @@
 import cv2
+import time
 from arduinocamera import ArduinoCamera
 from legodetector import LegoDetector
 from global_setting import *
@@ -21,7 +22,7 @@ if __name__ == "__main__":
         cv2.imshow("Small Camera Detect", result)
 
         # Control the detection interval if needed
-        # time.sleep(1)
+        time.sleep(1)
 
         key = cv2.waitKey(1)
         if key == ord("q"):

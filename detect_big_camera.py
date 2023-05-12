@@ -1,6 +1,7 @@
 # Get picture from NexiGo-Webcam N60 and detect the numbers of Lego Minifigures
 
 import cv2
+import time
 from legodetector import LegoDetector
 from global_setting import *
 
@@ -24,8 +25,8 @@ if __name__ == "__main__":
             cv2.imshow("Small Camera Detect", result_image)
 
             # Control the detection interval if needed
-            # time.sleep(1)
-            
+            time.sleep(1)
+
             if cv2.waitKey(1) & 0xFF == ord("q"):
                 break
         else:

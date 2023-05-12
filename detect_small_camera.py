@@ -1,5 +1,5 @@
 # Get picture from ArduCam small SPI camera modules and detect the numbers of Lego Minifigures
-
+import time
 import cv2
 from arduinocamera import ArduinoCamera
 from legodetector import LegoDetector
@@ -19,7 +19,7 @@ if __name__ == "__main__":
         cv2.imshow("Small Camera Detect", result_image)
 
         # Control the detection interval if needed
-        # time.sleep(1)
+        time.sleep(10)
 
         key = cv2.waitKey(1)
         if key == ord("q"):
