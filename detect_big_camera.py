@@ -22,10 +22,11 @@ if __name__ == "__main__":
         if success:
             picture = frame
             lego_people_num, result_image = detector.detect_lego_people(picture)
-            cv2.imshow("Small Camera Detect", result_image)
+            cv2.imshow("Detect Lego with USB Camera", result_image)
 
             # Control the detection interval if needed
-            time.sleep(1)
+            if enable_detect_interval:
+                time.sleep(detect_interval)
 
             if cv2.waitKey(1) & 0xFF == ord("q"):
                 break

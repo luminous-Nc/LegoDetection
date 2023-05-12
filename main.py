@@ -19,10 +19,11 @@ if __name__ == "__main__":
 
         lego_people_num, result = detector.detect_lego_people(picture)
 
-        cv2.imshow("Small Camera Detect", result)
+        cv2.imshow("Lego Detection with ArduCam-2MP-Plus", result)
 
         # Control the detection interval if needed
-        time.sleep(1)
+        if enable_detect_interval:
+            time.sleep(detect_interval)
 
         key = cv2.waitKey(1)
         if key == ord("q"):

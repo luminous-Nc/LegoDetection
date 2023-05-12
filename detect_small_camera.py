@@ -19,7 +19,8 @@ if __name__ == "__main__":
         cv2.imshow("Small Camera Detect", result_image)
 
         # Control the detection interval if needed
-        time.sleep(10)
+        if enable_detect_interval:
+            time.sleep(detect_interval)
 
         key = cv2.waitKey(1)
         if key == ord("q"):

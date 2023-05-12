@@ -13,3 +13,7 @@ Baudrate = 921600
 Bytesize = 8
 Parity = 'N'
 Stopbits = 1
+
+# configure the detect interval
+enable_detect_interval = True
+detect_interval = 10
