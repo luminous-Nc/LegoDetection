@@ -36,10 +36,10 @@ class ArduinoCamera:
 
         self.serial_obj.write(bytes([0x10]))
 
-        self.wait_arduino_until_message('ACK CMD CAM Capture Done.END\r\n')
-
-        image_size = self.serial_obj.readline().decode('UTF-8')
-        # print(f"Image Size {image_size}")
+        # self.wait_arduino_until_message('ACK CMD CAM Capture Done.END\r\n')
+        #
+        # image_size = self.serial_obj.readline().decode('UTF-8')
+        # # print(f"Image Size {image_size}")
 
         self.wait_arduino_until_message('ACK CMD IMG END\r\n')
 

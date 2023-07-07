@@ -8,12 +8,12 @@ detect_conf = 0.75
 
 # configure the serial port
 # Check Device Manager to define the Port number for Arduino Board
-Port = 'COM7'
-Baudrate = 921600
+Port = 'COM8'
+Baudrate = 230400
 Bytesize = 8
 Parity = 'N'
 Stopbits = 1
 
 # configure the detect interval
-enable_detect_interval = True
+enable_detect_interval = False
 detect_interval = 10

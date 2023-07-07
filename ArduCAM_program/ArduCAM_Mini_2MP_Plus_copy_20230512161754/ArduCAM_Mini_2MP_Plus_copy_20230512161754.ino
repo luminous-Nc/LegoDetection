@@ -49,13 +49,13 @@ void setup() {
   uint8_t temp;
 #if defined(__SAM3X8E__)
   Wire1.begin();
-  Serial.begin(115200);
+  Serial.begin(230400);
 #else
   Wire.begin();
-  Serial.begin(921600);
+  Serial.begin(230400);
 #endif
-  Serial.println(F("ACK Use ArduCAM to detect Lego! END"));
-  Serial.println(F("ACK CMD ArduCAM Start! END"));
+  Serial.println(("ACK Use ArduCAM to detect Lego! END"));
+  Serial.println(("ACK CMD ArduCAM Start! END"));
   // set the CS as an output:
   pinMode(CS, OUTPUT);
   digitalWrite(CS, HIGH);
