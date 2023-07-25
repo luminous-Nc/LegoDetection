@@ -1,0 +1,61 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+yolov8n.pt
+
+# C extensions
+*.so
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+eggs/
+
+# Python installer metadata
+pip-wheel-metadata/
+pip_egg_info/
+
+# Installer logs
+pip-log/
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Jupyter Notebook temporary files
+.ipynb_checkpoints/
+
+# PyCharm files
+.idea/
+*.iml
+*.iws
+*.ipr
+*.log
+.idea_modules/
+
+# macOS hidden files
+.DS_Store
+
+# Windows thumbnail cache files
+Thumbs.db
+
+# Other
+*.bak
+*.tmp
+*.swp
+*.pyc
+*.pyo
+*~
+*.orig
+*.rej
+*.cache
+*.egg
+*.egg-info/
+*.vscode/
+*.vs/
+.vscode/
+.vs/
